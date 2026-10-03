@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ankole Grill | Gallery</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <div class="gallery-page">
+    
+        <div class="top-right-socials">
+            <a href="#"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65cd3f93856a28e39b8d5525_icons-01-p-500.png"></a>
+            <a href="#"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65cd3f92f95774d081cd0d00_icons-02-p-500.png"></a>
+        </div>
+
+        
+        <div id="sidebar" class="sidebar">
+            <a href="story.html">Our Story</a>
+            <a href="careers.html">Careers</a>
+            <a href="gallery.html">Gallery</a>
+            
+        </div>
+
+          <div id="hours-popup" class="hours-box">
+            <h3>Opening Hours</h3>
+            <div class="branch-hours">
+                <strong>Kitisuru</strong>
+                <p>Mon - Sun</p>
+                <p>9.00am - 11.00pm</p>
+            </div>
+            <div class="branch-hours">
+                <strong>Kilimani</strong>
+                <p>Mon - Sun</p>
+                <p>7.30am - 11.00pm</p>
+            </div>
+        </div> 
+
+        <div class="gallery-content">
+            <div class="gallery-header">
+                <img src="images/65c0b0524cdc940f7455af22_logo.svg" class="my-logo">
+                <h1>Gallery</h1>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="gallery-item"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/66a76be448aa7b5a14df2af2_ankolegrill_ankole%20hot%20wings!2-p-500.webp"></div>
+                    <div class="gallery-item"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/66a76f14c410437afe19cec1_ankolegrill_Kitisuru%20Night2-p-500.webp"></div>
+                    <div class="gallery-item"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/66a7716e0bf8cbaec13ae571_ankolegrill_%20(231)-p-500.webp"></div>
+                    <div class="gallery-item"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/66a7749713886c5b3e97e208_ankolegrill_%20(104)-p-500.webp"></div>
+                    <div class="gallery-item"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d481eeba5cb903c9af58f5_ankolegrill_merchandize2-p-500.jpg"></div>
+                    <div class="gallery-item"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d481ef2c1a81c4a2232a7d_ankolegrill_crispy%20chicken%20and%20avocado4-p-500.jpg"></div>
+                </div>
+
+                <div class="gallery-controls">
+                    <div class="nav-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="nav-arrows">
+                        <span class="g-arrow">←</span>
+                        <span class="g-arrow">→</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="bottom-bar">
+            <a href="#" onclick="toggleMenu()">☰</a>
+            <a href="#" onclick="toggleHours()">🕒</a>
+            <div class="nav-divider"></div>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="events.html">Events</a>
+            <a href="Live.html">Live</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="reservations.html" class="btn-box">Reservations</a>
+        </nav>
+
+        <a href="#" class="whatsapp-btn">
+            <img src="images/whatsapp.svg">
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var m = document.getElementById("sidebar");
+            document.getElementById("hours-popup").style.display = "none";
+            m.style.display = (m.style.display === "flex") ? "none" : "flex";
+        }
+        function toggleHours() {
+            var h = document.getElementById("hours-popup");
+            document.getElementById("sidebar").style.display = "none";
+            h.style.display = (h.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

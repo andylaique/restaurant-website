@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ankole Grill | Contacts</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <div class="contacts-page">
+
+        <div class="top-right-socials">
+            <a href="#"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65cd3f93856a28e39b8d5525_icons-01-p-500.png"></a>
+            <a href="#"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65cd3f92f95774d081cd0d00_icons-02-p-500.png"></a>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <a href="story.html">Our Story</a>
+            <a href="career.html">Careers</a>
+            <a href="gallery.html">Gallery</a>
+            
+        </div>
+
+          <div id="hours-popup" class="hours-box">
+            <h3>Opening Hours</h3>
+            <div class="branch-hours">
+                <strong>Kitisuru</strong>
+                <p>Mon - Sun</p>
+                <p>9.00am - 11.00pm</p>
+            </div>
+            <div class="branch-hours">
+                <strong>Kilimani</strong>
+                <p>Mon - Sun</p>
+                <p>7.30am - 11.00pm</p>
+            </div>
+        </div> 
+
+
+        <div class="watermark-center">
+            <img src="images/65c0b0524cdc940f7455af22_logo.svg">
+        </div>
+
+        <div class="contact-grid">
+            <div class="branch-card">
+                <h2>Kitisuru</h2>
+                <div class="info-line"><span>Address:</span> 0.6A, Kitisuru Rd, Nairobi</div>
+                <div class="info-line"><span>Hours:</span> Open 9 am - Closes 11 pm</div>
+                
+                <div class="section-title">Bookings & Orders:</div>
+                <div class="info-line">0703 212 121 / 0701 138 345</div>
+                
+                <div class="section-title">Email:</div>
+                <div class="info-line">sales@ankole.co.ke</div>
+                <div class="info-line">events@ankole.co.ke</div>
+            </div>
+
+            <div class="branch-card">
+                <h2>Kilimani</h2>
+                <div class="info-line"><span>Address:</span> PQ6M+R2X, Galana Rd, Nairobi</div>
+                <div class="info-line"><span>Hours:</span> Open</div>
+                <div class="info-line">Mon - Fri: 7:30 am - Closes 11 pm</div>
+                <div class="info-line">Sat & Sun: 9:00am - 11pm</div>
+                
+                <div class="section-title">Bookings & Orders:</div>
+                <div class="info-line">0710 202 020</div>
+                
+                <div class="section-title">Email:</div>
+                <div class="info-line">sales@ankole.co.ke</div>
+                <div class="info-line">events@ankole.co.ke</div>
+            </div>
+        </div>
+
+        <nav class="bottom-bar">
+            <a href="#" onclick="toggleMenu()">☰</a>
+            <a href="#" onclick="toggleHours()">🕒</a>
+            <div class="nav-divider"></div>
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="events.html">Events</a>
+            <a href="Live.html">Live</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="reservations.html" class="btn-box">Reservations</a>
+        </nav>
+
+        <a href="#" class="whatsapp-btn">
+            <img src="images/whatsapp.svg">
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var m = document.getElementById("sidebar");
+            document.getElementById("hours-popup").style.display = "none";
+            m.style.display = (m.style.display === "flex") ? "none" : "flex";
+        }
+        function toggleHours() {
+            var h = document.getElementById("hours-popup");
+            document.getElementById("sidebar").style.display = "none";
+            h.style.display = (h.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

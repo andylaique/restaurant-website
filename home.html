@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ankole Grill | Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <div class="main-box" id="main-box">
+         <div class="top-right-socials">
+            <a href="#"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65cd3f93856a28e39b8d5525_icons-01-p-500.png"></a>
+            <a href="#"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65cd3f92f95774d081cd0d00_icons-02-p-500.png"></a>
+        </div>
+        
+        <div id="sidebar" class="sidebar">
+            <a href="story.html">Our Story</a>
+            <a href="career.html">Careers</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+
+        <div id="hours-popup" class="hours-box">
+            <h3>Opening Hours</h3>
+            <div class="branch-hours">
+                <strong>Kitisuru</strong>
+                <p>Mon - Sun</p>
+                <p>9.00am - 11.00pm</p>
+            </div>
+            <div class="branch-hours">
+                <strong>Kilimani</strong>
+                <p>Mon - Sun</p>
+                <p>7.30am - 11.00pm</p>
+            </div>
+        </div> 
+
+        
+        <div class="center-content">
+            <img src="images/65c0b0524cdc940f7455af22_logo.svg" class="my-logo">
+            <h1 class="big-text" id="slider-text">welcome</h1>
+        </div>
+
+        <nav class="bottom-bar">
+            <a onclick="toggleMenu()">☰</a>
+            <a  onclick="toggleHours()">🕒</a>
+            <div class="nav-divider"></div>
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="events.html">Events</a>
+            <a href="Live.html">Live</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="reservation.html" class="btn-box">Reservations</a>
+        </nav>
+
+        <a href="#" class="whatsapp-btn">
+            <img src="images/whatsapp.svg">
+        </a>
+    </div>
+
+    <script>
+        
+        function toggleMenu() {
+            var box = document.getElementById("sidebar");
+            document.getElementById("hours-popup").style.display = "none";
+            box.style.display = (box.style.display === "flex") ? "none" : "flex";
+        }
+
+        function toggleHours() {
+            var box = document.getElementById("hours-popup");
+            document.getElementById("sidebar").style.display = "none";
+            box.style.display = (box.style.display === "block") ? "none" : "block";
+        }
+
+        const slides = [
+            { img: 'images/home.jpg', text: 'welcome' },
+            { img: 'https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65e5b8b549a7aac5dba0e7d3_ankole_kilimani_nightlife.jpg', text: 'discover' },
+            { img: 'https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c5f9644676e29dddf08c65_ankolegrill_t-bone-steak-2024-1.jpg', text: 'experience' },
+            { img: 'https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c3b0c67153d0056443f31e_ankolegrill_escobar1.jpg', text: 'taste' },
+            { img: 'https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65cb61d8c46dc657819e1cc2_ankolegrill_slider.jpg', text: 'savour' }
+        ];
+
+        let currentIndex = 0;
+        const mainBox = document.getElementById("main-box");
+        const textElement = document.getElementById("slider-text");
+
+        function updateSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            
+        
+            textElement.style.opacity = 0;
+
+            setTimeout(() => {
+                
+                mainBox.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${slides[currentIndex].img}')`;
+                textElement.innerText = slides[currentIndex].text;
+                
+            
+                textElement.style.opacity = 0.6; 
+            }, 800); 
+        }
+
+        setInterval(updateSlide, 5000);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ankole Grill | Kitisuru Menu</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <div class="menu-detail-container">
+        
+        <div id="sidebar" class="sidebar">
+            <a href="story.html">Our Story</a>
+            <a href="careers.html">Careers</a>
+            <a href="gallery.html">Gallery</a>
+            
+        </div>
+
+         <div id="hours-popup" class="hours-box">
+            <h3>Opening Hours</h3>
+            <div class="branch-hours">
+                <strong>Kitisuru</strong>
+                <p>Mon - Sun</p>
+                <p>9.00am - 11.00pm</p>
+            </div>
+            <div class="branch-hours">
+                <strong>Kilimani</strong>
+                <p>Mon - Sun</p>
+                <p>7.30am - 11.00pm</p>
+            </div>
+        </div> 
+
+
+        <div class="side-visual">
+              <div class="center-content">
+            <img src="images/65c0b0524cdc940f7455af22_logo.svg" class="my-logo">
+           
+        </div>
+
+            <div class="side-branding">
+                <p>Menu</p>
+                <h2 class="orange-title">Kitisuru</h2>
+            </div>
+        </div>
+
+        <div class="menu-scroll-list">
+            <nav class="top-categories">
+                <a href="#breakfast-sec">Breakfast</a>
+                <a href="#food-sec">Food</a>
+                <a href="#bites-sec">Bites & Sauces</a>
+                <a href="#drinks-sec">Drinks</a>
+                <a href="#happy-sec">Happy Hour</a>
+            </nav>
+
+            <div class="list-content">
+                <h3 id="breakfast-sec">Breakfast</h3>
+                <p class="serving-info">Kitisuru breakfast is served from 9.00am to 11.00am daily</p>
+                <p class="orange-subtitle">COFFEE • TEA • CHOCOLATE</p>
+                
+                <div class="price-row"><span>Freshly Brewed Coffee</span><span>Kshs 300</span></div>
+                <div class="price-row"><span>Espresso</span><span>Kshs 300</span></div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="icon-circle"><img src="images/65c0b0524cdc940f7455af22_logo.svg"></div>
+                        <div class="item-main">
+                            <div class="item-name-row">
+                                <span class="item-title">ANKOLE BIG BREAKFAST</span>
+                                <span class="item-price">Kshs 1800</span>
+                            </div>
+                            <p class="item-description">2 eggs, 150gms grilled fillet steak, toast, hash browns, BBQ baked beans</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="food-sec" class="category-header">Food</h2>
+                <h4 class="orange-label">SOUPS</h4>
+                <div class="price-row"><span>SPICY WEST AFRICAN MBUZI SOUP</span><span>Kshs 450</span></div>
+                
+                <h4 class="orange-label">SANDWICHES</h4>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="icon-circle"><img src="images/65c0b0524cdc940f7455af22_logo.svg"></div>
+                        <div class="item-main">
+                            <div class="item-name-row">
+                                <span class="item-title">CLASSIC GRILLED CUBAN</span>
+                                <span class="item-price">Kshs 1500</span>
+                            </div>
+                            <p class="item-description">ham, gouda, pulled pork, pickles, spicy mustard dressing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 id="bites-sec" class="orange-label">BITES & SAUCES</h4>
+                <div class="price-row"><span>CHICKEN WINGS</span><span>Kshs 950</span></div>
+
+                <h2 id="drinks-sec" class="category-header">Drinks</h2>
+                <h4 class="orange-label">FRESH JUICES</h4>
+                <div class="price-row"><span>TREE TOMATO</span><span>Kshs 700</span></div>
+                <div class="price-row"><span>MANGO</span><span>Kshs 700</span></div>
+
+                <h2 id="happy-sec" class="category-header">Happy Hour</h2>
+                <p class="serving-info">EVERY DAY FROM 4.00PM - 7.00PM</p>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="icon-circle"><img src="images/65c0b0524cdc940f7455af22_logo.svg"></div>
+                        <div class="item-main">
+                            <div class="item-name-row">
+                                <span class="item-title">THE PRINCESS NGURU</span>
+                                <span class="item-price">Kshs 750</span>
+                            </div>
+                            <p class="item-description">white rum, raspberry puree, sukari nguru, lime, mint</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="bottom-bar">
+            <a href="#" onclick="toggleMenu()">☰</a>
+            <a href="#" onclick="toggleHours()">🕒</a>
+            <div class="nav-divider"></div>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="events.html">Events</a>
+            <a href="Live.html">Live</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="reservations.html" class="btn-box">Reservations</a>
+        </nav>
+
+        <a href="#" class="whatsapp-btn">
+            <img src="images/whatsapp.svg">
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var m = document.getElementById("sidebar");
+            document.getElementById("hours-popup").style.display = "none";
+            m.style.display = (m.style.display === "flex") ? "none" : "flex";
+        }
+        function toggleHours() {
+            var h = document.getElementById("hours-popup");
+            document.getElementById("sidebar").style.display = "none";
+            h.style.display = (h.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

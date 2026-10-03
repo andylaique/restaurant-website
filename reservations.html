@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ankole Grill | Reservations</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <div class="reservation-page">
+
+       
+        <div id="sidebar" class="sidebar">
+            <a href="story.html">Our Story</a>
+            <a href="career.html">Careers</a>
+            <a href="gallery.html">Gallery</a>
+            
+        </div>
+
+          <div id="hours-popup" class="hours-box">
+            <h3>Opening Hours</h3>
+            <div class="branch-hours">
+                <strong>Kitisuru</strong>
+                <p>Mon - Sun</p>
+                <p>9.00am - 11.00pm</p>
+            </div>
+            <div class="branch-hours">
+                <strong>Kilimani</strong>
+                <p>Mon - Sun</p>
+                <p>7.30am - 11.00pm</p>
+            </div>
+        </div> 
+
+
+        <div class="split-reservation">
+            <div class="res-left">
+                <div class="res-watermark">
+                    <img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c0b0524cdc940f7455af22_logo.svg">
+                </div>
+                <div class="res-title">
+                    <p>Karibu</p>
+                    <h1 class="res-orange-text">Reservation</h1>
+                </div>
+            </div>
+
+            <div class="res-right">
+                <div class="res-righta">
+                     <div class="res-rightaa">
+                        <form class="booking-form" onsubmit="return false;">
+                    
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter your first name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location</label>
+                        <select>
+                            <option>Select Branch (Kitisuru / Kilimani)</option>
+                            <option>Kitisuru</option>
+                            <option>Kilimani</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="e.g info@mail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tel / Cell</label>
+                        <input type="tel" placeholder="+254 700 000 000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Number of Guests</label>
+                        <input type="number" placeholder="(maximum of 8 guests only)">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Time</label>
+                        <input type="time">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                     </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="bottom-bar">
+            <a href="#" onclick="toggleMenu()">☰</a>
+            <a href="#" onclick="toggleHours()">🕒</a>
+            <div class="nav-divider"></div>
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="events.html">Events</a>
+            <a href="live.html">Live</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="reservations.html" class="btn-box">Reservations</a>
+        </nav>
+
+        <a href="#" class="whatsapp-btn">
+            <img src="images/whatsapp.svg">
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var box = document.getElementById("sidebar");
+            document.getElementById("hours-popup").style.display = "none";
+            box.style.display = (box.style.display === "flex") ? "none" : "flex";
+        }
+
+        function toggleHours() {
+            var box = document.getElementById("hours-popup");
+            document.getElementById("sidebar").style.display = "none";
+            box.style.display = (box.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html> 

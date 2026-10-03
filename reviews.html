@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ankole Grill | Reviews</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+<div class="reviews">
+
+     <div class="top-right-socials">
+            <a href="#"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65cd3f93856a28e39b8d5525_icons-01-p-500.png"></a>
+            <a href="#"><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65cd3f92f95774d081cd0d00_icons-02-p-500.png"></a>
+        </div>
+
+    <div class="reviews-page">
+        <div id="sidebar" class="sidebar">
+            <a href="story.html">Our Story</a>
+            <a href="career.html">Careers</a>
+            <a href="gallery.html">Gallery</a>
+           
+        </div>
+
+          <div id="hours-popup" class="hours-box">
+            <h3>Opening Hours</h3>
+            <div class="branch-hours">
+                <strong>Kitisuru</strong>
+                <p>Mon - Sun</p>
+                <p>9.00am - 11.00pm</p>
+            </div>
+            <div class="branch-hours">
+                <strong>Kilimani</strong>
+                <p>Mon - Sun</p>
+                <p>7.30am - 11.00pm</p>
+            </div>
+        </div> 
+
+        <div class="reviews-container">
+                <img src="images/65c0b0524cdc940f7455af22_logo.svg" class="my-logo">
+            <h2 class="reviews-title">Reviews</h2>
+
+            <div class="testimonial-box">
+                <span class="quote-mark open-quote">“</span>
+                
+                <div class="testimonial-content" id="review-container">
+                    <p id="review-text" class="review-text">Love every detail of this restaurant, from the food to the hot towels to the warmth of the person serving us. To top it all the food was yummy yummy</p>
+                    <p id="reviewer-name" class="reviewer-name">Vicky Ramessur</p>
+                    <p id="reviewer-location" class="reviewer-location">KILIMANI</p>
+                </div>
+
+                <span class="quote-mark close-quote">”</span>
+                
+                <div class="nav-arrows">
+                    <span class="arrow" onclick="slideReview('prev')">‹</span>
+                    <span class="arrow" onclick="slideReview('next')">›</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="bottom-bar">
+            <a href="#" onclick="toggleMenu()">☰</a>
+            <a href="#" onclick="toggleHours()">🕒</a>
+            <div class="nav-divider"></div>
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="events.html">Events</a>
+            <a href="live.html">Live</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="reservations.html" class="btn-box">Reservations</a>
+        </nav>
+
+        <a href="#" class="whatsapp-btn">
+            <img src="images/whatsapp.svg">
+        </a>
+    </div>
+
+    <script>
+        const reviews = [
+            { text: "Love every detail of this restaurant, from the food to the hot towels to the warmth of the person serving us. To top it all the food was yummy yummy", name: "Vicky Ramessur", location: "KILIMANI" },
+            { text: "The ambiance is unmatched. The flame-grilled flavors truly bring the essence of African cuisine to life. Highly recommended!", name: "Samuel Otieno", location: "KITISURU" },
+            { text: "Amazing service and even better food. The cocktails at happy hour are the best in Nairobi. A 5-star experience every time.", name: "Anita Mwangi", location: "KILIMANI" }
+        ];
+
+        let currentIndex = 0;
+
+        function slideReview(direction) {
+            const container = document.getElementById("review-container");
+            
+            container.classList.remove("slide-from-left", "slide-from-right");
+            void container.offsetWidth; // Reset animation
+
+            if (direction === 'next') {
+                currentIndex = (currentIndex + 1) % reviews.length;
+                container.classList.add("slide-from-right");
+            } else {
+                currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+                container.classList.add("slide-from-left");
+            }
+
+            document.getElementById("review-text").innerText = reviews[currentIndex].text;
+            document.getElementById("reviewer-name").innerText = reviews[currentIndex].name;
+            document.getElementById("reviewer-location").innerText = reviews[currentIndex].location;
+        }
+
+        function toggleMenu() {
+            var m = document.getElementById("sidebar");
+            document.getElementById("hours-popup").style.display = "none";
+            m.style.display = (m.style.display === "flex") ? "none" : "flex";
+        }
+
+        function toggleHours() {
+            var h = document.getElementById("hours-popup");
+            document.getElementById("sidebar").style.display = "none";
+            h.style.display = (h.style.display === "block") ? "none" : "block";
+        }
+    </script>
+
+</div>
+</body>
+</html>

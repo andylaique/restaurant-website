@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ankole Grill | Events</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <div class="events-container">
+        
+        <div id="sidebar" class="sidebar">
+            <a href="story.html">Our Story</a>
+            <a href="career.html">Careers</a>
+            <a href="gallery.html">Gallery</a>
+          
+        </div>
+
+         <div id="hours-popup" class="hours-box">
+            <h3>Opening Hours</h3>
+            <div class="branch-hours">
+                <strong>Kitisuru</strong>
+                <p>Mon - Sun</p>
+                <p>9.00am - 11.00pm</p>
+            </div>
+            <div class="branch-hours">
+                <strong>Kilimani</strong>
+                <p>Mon - Sun</p>
+                <p>7.30am - 11.00pm</p>
+            </div>
+        </div> 
+
+
+
+
+           <div class="center-content">
+            <img src="images/65c0b0524cdc940f7455af22_logo.svg" class="my-logo">
+            
+        </div>
+
+        <div class="event-panel accra-bg">
+            <div class="panel-content">
+                <p class="pavilion-tag">pavilion</p>
+                <h2 class="panel-title">Accra</h2>
+                <div class="panel-details">
+                    <p>Pax: 8-10</p>
+                    <p>Perfect for: Corporate conferences | Private events</p>
+                </div>
+                <div class="panel-contact">
+                    <p>For more information:</p>
+                    <p>0703 212 121</p>
+                    <p>0701 138 345</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-panel nairobi-bg">
+            <div class="panel-content">
+                <p class="pavilion-tag">pavilion</p>
+                <h2 class="panel-title">Nairobi</h2>
+                <div class="panel-details">
+                    <p>Pax: 100-150</p>
+                    <p>Private bar | Spacious patio overlooking lush greenery</p>
+                </div>
+                <div class="panel-contact">
+                    <p>For more information:</p>
+                    <p>0703 212 121</p>
+                    <p>0701 138 345</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-panel zanzibar-bg">
+            <div class="panel-content">
+                <p class="pavilion-tag">pavilion</p>
+                <h2 class="panel-title">Zanzibar</h2>
+                <div class="panel-details">
+                    <p>Pax: 20-25</p>
+                    <p>Open light filled event space | Corporate | Private functions</p>
+                </div>
+                <div class="panel-contact">
+                    <p>For more information:</p>
+                    <p>0703 212 121</p>
+                    <p>0701 138 345</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="bottom-bar">
+            <a  onclick="toggleMenu()">☰</a>
+            <a  onclick="toggleHours()">🕒</a>
+            <div class="nav-divider"></div>
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="events.html">Events</a>
+            <a href="Live.html">Live</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="reservations.html" class="btn-box">Reservations</a>
+        </nav>
+
+        <a href="#" class="whatsapp-btn">
+         <img src="images/whatsapp.svg">
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var m = document.getElementById("sidebar");
+            document.getElementById("hours-popup").style.display = "none";
+            m.style.display = (m.style.display === "flex") ? "none" : "flex";
+        }
+        function toggleHours() {
+            var h = document.getElementById("hours-popup");
+            document.getElementById("sidebar").style.display = "none";
+            h.style.display = (h.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
